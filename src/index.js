@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import TodoList from "./1_todo_list";
-import CoinTracker from "./2_coin_tracker";
-import App from "./3_movie_app";
+import TodoList from "./practice/1_todo_list";
+import CoinTracker from "./practice/2_coin_tracker";
+import MovieList from "./practice/3_movie_list";
 // import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -12,7 +12,7 @@ root.render(
   <div>
     <TodoList />
     <CoinTracker />
-    <App />
+    <MovieList />
   </div>
 
   // </React.StrictMode>
