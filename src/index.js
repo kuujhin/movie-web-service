@@ -1,20 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import TodoList from "./practice/1_todo_list";
-import CoinTracker from "./practice/2_coin_tracker";
-import MovieList from "./practice/3_movie_list";
+import App from "./App";
 // import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   // <React.StrictMode>
-  <div>
-    <TodoList />
-    <CoinTracker />
-    <MovieList />
-  </div>
-
+  <App />
   // </React.StrictMode>
 );
 
