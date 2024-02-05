@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function App() {
+function MovieList() {
   const [loading, setLoading] = useState(true);
   const [movies, setMovies] = useState([]);
 
@@ -37,7 +37,7 @@ function App() {
         <div>
           {movies.map((movie) => (
             <div key={movie.id}>
-              <img src={movie.medium_cover_image} />
+              <img src={movie.medium_cover_image} alt="title" />
               <h2>{movie.title}</h2>
               <p>{movie.summary}</p>
               <ul>
@@ -53,4 +53,4 @@ function App() {
   );
 }
 
-export default App;
+export default MovieList;
