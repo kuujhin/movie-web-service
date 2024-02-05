@@ -6,9 +6,15 @@ function Movie({ id, coverImg, title, summary, genres }) {
     <div key={id}>
       <img src={coverImg} alt="title" />
       <h2>
-        <Link to="/movie">{title}</Link>
+        <Link to={`/movie/${id}`}>{title}</Link>
       </h2>
-      <p>{summary}</p>
+
+      {summary.length < 200 ? (
+        <p>{summary}</p>
+      ) : (
+        <p>{summary.split(" ").slice(0, 30).join(" ")}... </p>
+      )}
+
       <ul>
         {genres.map((g) => (
           <li key={g}>{g}</li>
@@ -19,6 +25,7 @@ function Movie({ id, coverImg, title, summary, genres }) {
 }
 
 Movie.propTypes = {
+  id: PropTypes.number.isRequired,
   coverImg: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   summary: PropTypes.string.isRequired,
